@@ -27,7 +27,7 @@ public class ZakaznikController {
 	private ZakaznikService service;
 	
 	/**
-	 * Seznam
+	 * UC: Seznam zákazníků
 	 * 
 	 * @return
 	 */
@@ -37,7 +37,7 @@ public class ZakaznikController {
 	}
 	
 	/**
-	 * Detail
+	 * UC: Správa zákazníků - detail
 	 * 
 	 * @param id
 	 * @return
@@ -54,7 +54,7 @@ public class ZakaznikController {
 	}
 	
 	/**
-	 * Nový záznam
+	 * UC: Správa zákazníků - nový záznam
 	 * 
 	 * @param data
 	 * @param provest   false(první průchod): Pokud jsou chyby nebo varování, vrátí se chybový kód 400 a seznam hlášení
@@ -76,7 +76,7 @@ public class ZakaznikController {
 	}
 
 	/**
-	 * Uložení změn 
+	 * UC: Správa zákazníků - změna
 	 * 
 	 * @param data
 	 * @param provest   false(první průchod): Pokud jsou chyby nebo varování, vrátí se chybový kód 400 a seznam hlášení
@@ -98,7 +98,7 @@ public class ZakaznikController {
 	}
 	
 	/**
-	 * Zneplatnit záznam
+	 * UC: Správa zákazníků - zneplatnit záznam
 	 * 
 	 * @param id
 	 * @param provest   false(první průchod): Pokud jsou chyby nebo varování, vrátí se chybový kód 400 a seznam hlášení

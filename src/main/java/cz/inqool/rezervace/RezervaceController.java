@@ -18,7 +18,7 @@ import cz.inqool.rezervace.domain.RezervaceDto;
 import cz.inqool.rezervace.domain.RezervaceEditaceDto;
 
 /**
- * Správa rezervací
+ * Správa rezervace kurtu
  */
 @RestController
 @RequestMapping("api/rezervace")
@@ -28,7 +28,7 @@ public class RezervaceController {
 	private RezervaceService service;
 	
 	/**
-	 * Seznam
+	 * UC: Seznam všech rezervací
 	 * 
 	 * @return
 	 */
@@ -37,9 +37,8 @@ public class RezervaceController {
 		return ResponseEntity.ok(service.seznam());
 	}
 	
-	
 	/**
-	 * Seznam rezervací dle ID kurtu
+	 * UC: Seznam rezervací dle kurtu
 	 * 
 	 * @param kurtId
 	 * @return
@@ -50,7 +49,7 @@ public class RezervaceController {
 	}
 	
 	/**
-	 * Seznam rezervací dle telefonu
+	 * UC: Seznam rezervací dle telefonu
 	 * 
 	 * @param telefon
 	 * @param budouci, nepovinný parametr 1 - zobrazí jen rezervace do budoucnosti
@@ -63,7 +62,7 @@ public class RezervaceController {
 	}
 	
 	/**
-	 * Detail
+	 * UC: Správa rezervace kurtu - detail
 	 * 
 	 * @param id
 	 * @return
@@ -80,7 +79,7 @@ public class RezervaceController {
 	}
 	
 	/**
-	 * Nový záznam
+	 * UC: Správa rezervace kurtu - nový záznam
 	 * 
 	 * V případě zadání tel.čísla, které neexistuje, tak se vytvoří pro toto číslo nový zákazník.
 	 * V případě zadání tel.čísla, které existuje, a je rozdílné jméno zákazníka, tak se jméno aktualizuje.
@@ -107,7 +106,7 @@ public class RezervaceController {
 	}
 
 	/**
-	 * Uložení změn 
+	 * UC: Správa rezervace kurtu - změna 
 	 * 
 	 * @param data
 	 * @param provest   false(první průchod): Pokud jsou chyby nebo varování, vrátí se chybový kód 400 a seznam hlášení
@@ -129,7 +128,7 @@ public class RezervaceController {
 	}
 	
 	/**
-	 * Zneplatnit záznam
+	 * UC: Správa rezervace kurtu - zneplatnit záznam
 	 * 
 	 * @param id
 	 * @param provest   false(první průchod): Pokud jsou chyby nebo varování, vrátí se chybový kód 400 a seznam hlášení

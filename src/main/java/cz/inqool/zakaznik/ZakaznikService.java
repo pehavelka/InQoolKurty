@@ -12,6 +12,9 @@ import cz.inqool.core.ErrorCollector;
 import cz.inqool.zakaznik.domain.Zakaznik;
 import cz.inqool.zakaznik.domain.ZakaznikDto;
 
+/**
+ * Správa zákazníků
+ */
 @Service
 public class ZakaznikService {
 	
@@ -19,7 +22,7 @@ public class ZakaznikService {
 	private ZakaznikRepository repo;
 	
 	/**
-	 * Seznam
+	 * UC: Seznam zákazníků
 	 * 
 	 * @return
 	 */
@@ -28,7 +31,7 @@ public class ZakaznikService {
 	}
 	
 	/**
-	 * Detail
+	 * UC: Správa zákazníků - detail
 	 * 
 	 * @param id
 	 * @return
@@ -38,7 +41,7 @@ public class ZakaznikService {
 	}
 	
 	/**
-	 * Kontroly nový, změna
+	 * UC: Správa zákazníků - nový záznam, změna - kontroly
 	 * 
 	 * @param dto
 	 * @param novy
@@ -80,7 +83,7 @@ public class ZakaznikService {
 	}
 	
 	/**
-	 * Uložit - nový
+	 * UC: Správa zákazníků - nový záznam
 	 * 
 	 * @param dto
 	 * @return
@@ -94,7 +97,7 @@ public class ZakaznikService {
 	}
 	
 	/**
-	 * Uložit - změna
+	 * UC: Správa zákazníků - změna
 	 * 
 	 * @param dto
 	 * @return
@@ -108,7 +111,7 @@ public class ZakaznikService {
 	}
 	
 	/**
-	 * Uložit - zneplatnit
+	 * UC: Správa zákazníků - zneplatnit záznam
 	 * 
 	 * @param id
 	 * @return
@@ -122,7 +125,7 @@ public class ZakaznikService {
 	}
 	
 	/**
-	 * Kontroly - zneplatnit 
+	 * UC: Správa zákazníků - zneplatnit záznam, kontroly 
 	 * 
 	 * @param dto
 	 * @return

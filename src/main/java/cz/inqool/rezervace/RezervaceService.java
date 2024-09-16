@@ -21,6 +21,9 @@ import cz.inqool.zakaznik.ZakaznikService;
 import cz.inqool.zakaznik.domain.Zakaznik;
 import cz.inqool.zakaznik.domain.ZakaznikDto;
 
+/**
+ * Správa rezervace kurtu
+ */
 @Service
 public class RezervaceService {
 	
@@ -42,7 +45,7 @@ public class RezervaceService {
 	private ZakaznikService zakaznikService;
 	
 	/**
-	 * Seznam
+	 * UC: Seznam všech rezervací
 	 * 
 	 * @return
 	 */
@@ -51,7 +54,7 @@ public class RezervaceService {
 	}
 
 	/**
-	 * Seznam rezervací dle id kurtu
+	 * UC: Seznam rezervací dle kurtu
 	 * 
 	 * @param id
 	 * @return
@@ -61,7 +64,7 @@ public class RezervaceService {
 	}
 	
 	/**
-	 * Seznam rezervací dle telefonu
+	 * UC: Seznam rezervací dle telefonu
 	 * 
 	 * @param telefon
 	 * @param budouci 1 - zobrazí jen rezervace do budoucnosti
@@ -74,7 +77,7 @@ public class RezervaceService {
 	}
 	
 	/**
-	 * Detail
+	 * UC: Správa rezervace kurtu - detail
 	 * 
 	 * @param id
 	 * @return
@@ -84,7 +87,7 @@ public class RezervaceService {
 	}
 	
 	/**
-	 * Kontroly nový, změna
+	 * UC: Správa rezervace kurtu - nový záznam, změna - kontroly
 	 * 
 	 * @param dto
 	 * @param novy
@@ -163,7 +166,7 @@ public class RezervaceService {
 	}
 	
 	/**
-	 * Uložit - nový
+	 * UC: Správa rezervace kurtu - nový záznam
 	 * 
 	 * @param dto
 	 * @return
@@ -185,7 +188,7 @@ public class RezervaceService {
 	}
 	
 	/**
-	 * Uložit - změna
+	 * UC: Správa rezervace kurtu - změna
 	 * 
 	 * @param dto
 	 * @return
@@ -234,7 +237,7 @@ public class RezervaceService {
 	}
 	
 	/**
-	 * Výpočet ceny pronájmu za kurt.
+	 * UC: Výpočet pronájmu
 	 * V případě čtyřhry je cena násobkem 1,5
 	 * 
 	 * @param dto
@@ -254,9 +257,8 @@ public class RezervaceService {
 	    dto.setCenaPronajem(cenaPronajem);		
 	}
 	
-	
 	/**
-	 * Uložit - zneplatnit
+	 * UC: Správa rezervace kurtu - zneplatnit záznam
 	 * 
 	 * @param id
 	 * @return
@@ -270,7 +272,7 @@ public class RezervaceService {
 	}
 	
 	/**
-	 * Kontroly - zneplatnit 
+	 * UC: Správa rezervace kurtu - zneplatnit záznam - kontroly
 	 * 
 	 * @param dto
 	 * @return

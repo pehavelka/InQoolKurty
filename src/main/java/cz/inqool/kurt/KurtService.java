@@ -14,6 +14,9 @@ import cz.inqool.kurt.domain.KurtDto;
 import cz.inqool.povrch.PovrchRepository;
 import cz.inqool.povrch.domain.Povrch;
 
+/**
+ * Správa kurtů
+ */
 @Service
 public class KurtService {
 	
@@ -24,7 +27,7 @@ public class KurtService {
 	private PovrchRepository povrchRepository;
 	
 	/**
-	 * Seznam
+	 * UC: Seznam kurtů
 	 * 
 	 * @return
 	 */
@@ -33,7 +36,7 @@ public class KurtService {
 	}
 	
 	/**
-	 * Detail
+	 * UC: Správa kurtů - detail
 	 * 
 	 * @param id
 	 * @return
@@ -43,7 +46,7 @@ public class KurtService {
 	}
 	
 	/**
-	 * Kontroly nový, změna
+	 * UC: Správa kurtů - nový záznam, změna - kontroly
 	 * 
 	 * @param dto
 	 * @param novy
@@ -88,7 +91,7 @@ public class KurtService {
 	}
 	
 	/**
-	 * Uložit - nový
+	 * UC: Správa kurtů - nový záznam
 	 * 
 	 * @param dto
 	 * @return
@@ -103,7 +106,7 @@ public class KurtService {
 	}
 	
 	/**
-	 * Uložit - změna
+	 * UC: Správa kurtů - změna
 	 * 
 	 * @param dto
 	 * @return
@@ -117,7 +120,7 @@ public class KurtService {
 	}
 	
 	/**
-	 * Uložit - zneplatnit
+	 * UC: Správa kurtů - zneplatnit záznam
 	 * 
 	 * @param id
 	 * @return
@@ -131,7 +134,7 @@ public class KurtService {
 	}
 	
 	/**
-	 * Kontroly - zneplatnit 
+	 * UC: Správa kurtů - zneplatnit záznam - kontroly 
 	 * 
 	 * @param dto
 	 * @return

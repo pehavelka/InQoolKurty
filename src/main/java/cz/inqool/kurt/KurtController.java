@@ -27,7 +27,7 @@ public class KurtController {
 	private KurtService service;
 	
 	/**
-	 * Seznam
+	 * UC: Seznam kurtů
 	 * 
 	 * @return
 	 */
@@ -37,7 +37,7 @@ public class KurtController {
 	}
 	
 	/**
-	 * Detail
+	 * UC: Správa kurtů - detail
 	 * 
 	 * @param id
 	 * @return
@@ -54,7 +54,7 @@ public class KurtController {
 	}
 	
 	/**
-	 * Nový záznam
+	 * UC: Správa kurtů - nový záznam
 	 * 
 	 * @param data
 	 * @param provest   false(první průchod): Pokud jsou chyby nebo varování, vrátí se chybový kód 400 a seznam hlášení
@@ -76,7 +76,7 @@ public class KurtController {
 	}
 
 	/**
-	 * Uložení změn 
+	 * UC: Správa kurtů - změna 
 	 * 
 	 * @param data
 	 * @param provest   false(první průchod): Pokud jsou chyby nebo varování, vrátí se chybový kód 400 a seznam hlášení
@@ -98,7 +98,7 @@ public class KurtController {
 	}
 	
 	/**
-	 * Zneplatnit záznam
+	 * UC: Správa kurtů - zneplatnit záznam
 	 * 
 	 * @param id
 	 * @param provest   false(první průchod): Pokud jsou chyby nebo varování, vrátí se chybový kód 400 a seznam hlášení

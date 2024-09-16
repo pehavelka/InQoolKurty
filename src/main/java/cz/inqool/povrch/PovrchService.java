@@ -13,6 +13,9 @@ import cz.inqool.core.ErrorCollector;
 import cz.inqool.povrch.domain.Povrch;
 import cz.inqool.povrch.domain.PovrchDto;
 
+/**
+ * Správa povrchů
+ */
 @Service
 public class PovrchService {
 	
@@ -20,7 +23,7 @@ public class PovrchService {
 	private PovrchRepository repo;
 	
 	/**
-	 * Seznam
+	 * UC: Seznam povrchů
 	 * 
 	 * @return
 	 */
@@ -29,7 +32,7 @@ public class PovrchService {
 	}
 	
 	/**
-	 * Detail
+	 * UC: Správa povrchů - detail
 	 * 
 	 * @param id
 	 * @return
@@ -39,7 +42,7 @@ public class PovrchService {
 	}
 	
 	/**
-	 * Kontroly nový, změna
+	 * UC: Správa povrchů - nový záznam, změna - kontroly
 	 * 
 	 * @param dto
 	 * @param novy
@@ -77,7 +80,7 @@ public class PovrchService {
 	}
 	
 	/**
-	 * Uložit - nový
+	 * UC: Správa povrchů - nový záznam
 	 * 
 	 * @param dto
 	 * @return
@@ -91,7 +94,7 @@ public class PovrchService {
 	}
 	
 	/**
-	 * Uložit - změna
+	 * UC: Správa povrchů - změna
 	 * 
 	 * @param dto
 	 * @return
@@ -105,7 +108,7 @@ public class PovrchService {
 	}
 	
 	/**
-	 * Uložit - zneplatnit
+	 *  UC: Správa povrchů - zneplatnit záznam
 	 * 
 	 * @param id
 	 * @return
@@ -119,7 +122,7 @@ public class PovrchService {
 	}
 	
 	/**
-	 * Kontroly - zneplatnit 
+	 *  UC: Správa povrchů - zneplatnit záznam, kontroly
 	 * 
 	 * @param dto
 	 * @return

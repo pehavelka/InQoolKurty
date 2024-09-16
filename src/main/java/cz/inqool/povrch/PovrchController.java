@@ -27,7 +27,7 @@ public class PovrchController {
 	private PovrchService service;
 	
 	/**
-	 * Seznam
+	 * UC: Seznam povrchů
 	 * 
 	 * @return
 	 */
@@ -37,7 +37,7 @@ public class PovrchController {
 	}
 	
 	/**
-	 * Detail
+	 * UC: Správa povrchů - detail
 	 * 
 	 * @param id
 	 * @return
@@ -54,7 +54,7 @@ public class PovrchController {
 	}
 	
 	/**
-	 * Nový záznam
+	 * UC: Správa povrchů - nový záznam
 	 * 
 	 * @param data
 	 * @param provest   false(první průchod): Pokud jsou chyby nebo varování, vrátí se chybový kód 400 a seznam hlášení
@@ -76,7 +76,7 @@ public class PovrchController {
 	}
 
 	/**
-	 * Uložení změn 
+	 * UC: Správa povrchů - změna 
 	 * 
 	 * @param data
 	 * @param provest   false(první průchod): Pokud jsou chyby nebo varování, vrátí se chybový kód 400 a seznam hlášení
@@ -98,7 +98,7 @@ public class PovrchController {
 	}
 	
 	/**
-	 * Zneplatnit záznam
+	 * UC: Správa povrchů - zneplatnit záznam
 	 * 
 	 * @param id
 	 * @param provest   false(první průchod): Pokud jsou chyby nebo varování, vrátí se chybový kód 400 a seznam hlášení
