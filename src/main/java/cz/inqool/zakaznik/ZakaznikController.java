@@ -15,10 +15,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 import cz.inqool.core.ErrorCollector;
 import cz.inqool.zakaznik.domain.ZakaznikDto;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Správa zákazníků
  */
+@Slf4j
 @RestController
 @RequestMapping("api/zakaznik")
 public class ZakaznikController {
@@ -33,6 +35,7 @@ public class ZakaznikController {
 	 */
 	@GetMapping
 	public ResponseEntity<Object> getSeznam() {
+		log.debug("getSeznam");
 		return ResponseEntity.ok(service.seznam());
 	}
 	
@@ -44,6 +47,7 @@ public class ZakaznikController {
 	 */
 	@GetMapping(path = "/{id}")
 	public ResponseEntity<Object> getDetail(@PathVariable Integer id) {
+		log.debug("getDetail");
 		Optional<ZakaznikDto> dto = service.detail(id);
 
 		if (dto.isEmpty()) {
@@ -63,6 +67,7 @@ public class ZakaznikController {
 	 */
 	@PostMapping
 	public ResponseEntity<Object> novy(@RequestBody ZakaznikDto data, @RequestParam(defaultValue = "false") boolean provest) {
+		log.debug("novy");
 		ErrorCollector errs = new ErrorCollector();
 		
 		service.kontroly(data, errs, true);
@@ -85,6 +90,7 @@ public class ZakaznikController {
 	 */
 	@PutMapping
 	public ResponseEntity<Object> zmena(@RequestBody ZakaznikDto data, @RequestParam(defaultValue = "false") boolean provest) {
+		log.debug("zmena");
 		ErrorCollector errs = new ErrorCollector();
 		
 		service.kontroly(data, errs, false);
@@ -107,6 +113,7 @@ public class ZakaznikController {
 	 */
 	@PutMapping("/{id}")
 	public ResponseEntity<Object> zneplatnit(@PathVariable Integer id, @RequestParam(defaultValue = "false") boolean provest) {
+		log.debug("zneplatnit");
 		ErrorCollector errs = new ErrorCollector();
 		
 		ZakaznikDto dto = ZakaznikDto

@@ -15,10 +15,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 import cz.inqool.core.ErrorCollector;
 import cz.inqool.kurt.domain.KurtDto;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Správa kurtů
  */
+@Slf4j
 @RestController
 @RequestMapping("api/kurt")
 public class KurtController {
@@ -33,6 +35,7 @@ public class KurtController {
 	 */
 	@GetMapping
 	public ResponseEntity<Object> getSeznam() {
+		log.debug("getSeznam");
 		return ResponseEntity.ok(service.seznam());
 	}
 	
@@ -44,6 +47,7 @@ public class KurtController {
 	 */
 	@GetMapping(path = "/{id}")
 	public ResponseEntity<Object> getDetail(@PathVariable Integer id) {
+		log.debug("getDetail");
 		Optional<KurtDto> dto = service.detail(id);
 
 		if (dto.isEmpty()) {
@@ -63,6 +67,7 @@ public class KurtController {
 	 */
 	@PostMapping
 	public ResponseEntity<Object> novy(@RequestBody KurtDto data, @RequestParam(defaultValue = "false") boolean provest) {
+		log.debug("novy");
 		ErrorCollector errs = new ErrorCollector();
 		
 		service.kontroly(data, errs, true);
@@ -85,6 +90,7 @@ public class KurtController {
 	 */
 	@PutMapping
 	public ResponseEntity<Object> zmena(@RequestBody KurtDto data, @RequestParam(defaultValue = "false") boolean provest) {
+		log.debug("zmena");
 		ErrorCollector errs = new ErrorCollector();
 		
 		service.kontroly(data, errs, false);
@@ -107,6 +113,7 @@ public class KurtController {
 	 */
 	@PutMapping("/{id}")
 	public ResponseEntity<Object> zneplatnit(@PathVariable Integer id, @RequestParam(defaultValue = "false") boolean provest) {
+		log.debug("zneplatnit");
 		ErrorCollector errs = new ErrorCollector();
 		
 		KurtDto dto = KurtDto

@@ -16,10 +16,12 @@ import org.springframework.web.bind.annotation.RestController;
 import cz.inqool.core.ErrorCollector;
 import cz.inqool.rezervace.domain.RezervaceDto;
 import cz.inqool.rezervace.domain.RezervaceEditaceDto;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Správa rezervace kurtu
  */
+@Slf4j
 @RestController
 @RequestMapping("api/rezervace")
 public class RezervaceController {
@@ -34,6 +36,7 @@ public class RezervaceController {
 	 */
 	@GetMapping
 	public ResponseEntity<Object> getSeznam() {
+		log.debug("getSeznam");
 		return ResponseEntity.ok(service.seznam());
 	}
 	
@@ -45,6 +48,7 @@ public class RezervaceController {
 	 */
 	@GetMapping(path = "seznam-kurt/{kurtId}")
 	public ResponseEntity<Object> getSeznamDleKurtu(@PathVariable Integer kurtId) {
+		log.debug("getSeznamDleKurtu");
 		return ResponseEntity.ok(service.seznamDleKurtu(kurtId));
 	}
 	
@@ -58,6 +62,7 @@ public class RezervaceController {
 	@GetMapping(path = "seznam-telefon/{telefon}")
 	public ResponseEntity<Object> getSeznamDleTelefonu(@PathVariable String telefon
 			, @RequestParam(required = false) Boolean budouci) {
+		log.debug("getSeznamDleTelefonu");
 		return ResponseEntity.ok(service.seznamDleTelefonu(telefon, budouci));
 	}
 	
@@ -69,6 +74,7 @@ public class RezervaceController {
 	 */
 	@GetMapping(path = "/{id}")
 	public ResponseEntity<Object> getDetail(@PathVariable Integer id) {
+		log.debug("getDetail");
 		Optional<RezervaceDto> dto = service.detail(id);
 
 		if (dto.isEmpty()) {
@@ -93,6 +99,7 @@ public class RezervaceController {
 	 */
 	@PostMapping
 	public ResponseEntity<Object> novy(@RequestBody RezervaceEditaceDto data, @RequestParam(defaultValue = "false") boolean provest) {
+		log.debug("novy");
 		ErrorCollector errs = new ErrorCollector();
 		
 		service.kontroly(data, errs, true);
@@ -115,6 +122,7 @@ public class RezervaceController {
 	 */
 	@PutMapping
 	public ResponseEntity<Object> zmena(@RequestBody RezervaceEditaceDto data, @RequestParam(defaultValue = "false") boolean provest) {
+		log.debug("zmena");
 		ErrorCollector errs = new ErrorCollector();
 		
 		service.kontroly(data, errs, false);
@@ -137,6 +145,7 @@ public class RezervaceController {
 	 */
 	@PutMapping("/{id}")
 	public ResponseEntity<Object> zneplatnit(@PathVariable Integer id, @RequestParam(defaultValue = "false") boolean provest) {
+		log.debug("zneplatnit");
 		ErrorCollector errs = new ErrorCollector();
 		
 		RezervaceDto dto = RezervaceDto
