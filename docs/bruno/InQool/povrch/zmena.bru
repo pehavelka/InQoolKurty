@@ -1,0 +1,26 @@
+meta {
+  name: zmena
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://localhost:8080/api/povrch?provest=1
+  body: json
+  auth: none
+}
+
+params:query {
+  provest: 1
+}
+
+body:json {
+  {
+    "id": 1,
+    "zmenaUzivatel": "sa",
+    "zmenaCas": "2024-09-09T20:05:35.189619",
+    "platnost": false,
+    "nazev": "tráva",
+    "cena": 10
+  }
+}

@@ -1,0 +1,32 @@
+meta {
+  name: novy
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:8080/api/kurt?provest=0
+  body: json
+  auth: none
+}
+
+params:query {
+  provest: 0
+}
+
+body:json {
+  {
+    "zmenaUzivatel": "sa",
+    "zmenaCas": "2024-09-05T23:32:21.730147",
+    "platnost": true,
+    "povrch": {
+      "id": 2,
+      "zmenaUzivatel": "sa",
+      "zmenaCas": "2024-09-15T21:48:56.869476",
+      "platnost": true,
+      "nazev": "antuka",
+      "cena": 20
+    },
+    "nazev": "Kurt č.1 - tráva aaaa"
+  }
+}

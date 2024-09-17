@@ -1,0 +1,22 @@
+meta {
+  name: novy
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:8080/api/zakaznik?provest=0
+  body: json
+  auth: none
+}
+
+params:query {
+  provest: 0
+}
+
+body:json {
+  {
+    "telefon": "739000444",
+    "celeJmeno": "Zakaznik 4"
+  }
+}

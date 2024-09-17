@@ -1,0 +1,15 @@
+meta {
+  name: zneplatnit
+  type: http
+  seq: 5
+}
+
+put {
+  url: http://localhost:8080/api/zakaznik/2?provest=1
+  body: none
+  auth: none
+}
+
+params:query {
+  provest: 1
+}

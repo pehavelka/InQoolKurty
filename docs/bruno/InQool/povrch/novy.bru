@@ -1,0 +1,22 @@
+meta {
+  name: novy
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:8080/api/povrch?provest=1
+  body: json
+  auth: none
+}
+
+params:query {
+  provest: 1
+}
+
+body:json {
+  {
+    "nazev": "asfalt",
+    "cena": 10
+  }
+}
