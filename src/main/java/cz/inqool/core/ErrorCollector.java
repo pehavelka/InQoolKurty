@@ -9,10 +9,9 @@ import lombok.Data;
 
 
 /**
- * Sběrač chyb.
+ * Třída pro obsluhu chybových hlášení a varování
  * 
  */
-
 @Data
 public class ErrorCollector {
 

@@ -12,7 +12,6 @@ import lombok.Data;
 /**
  * Předek entit
  */
-
 @MappedSuperclass //nejedná se o entitu
 @Data
 public abstract class BaseEntity {

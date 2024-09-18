@@ -5,13 +5,13 @@ meta {
 }
 
 post {
-  url: http://localhost:8080/api/rezervace?provest=1
+  url: http://localhost:8080/api/rezervace?provest=false
   body: json
   auth: none
 }
 
 params:query {
-  provest: 1
+  provest: false
 }
 
 body:json {
@@ -19,9 +19,9 @@ body:json {
     "kurtId": 1,
     "telefon": "739000222",
     "celeJmeno": "Zakaznik 2",
-    "datumOd": "2025-01-01T17:30:00",
-    "datumDo": "2025-01-01T18:00:00",
-    "jeCtyrHra": false,
+    "datumOd": "2025-03-01T08:00:00",
+    "datumDo": "2025-03-01T09:00:00",
+    "jeCtyrHra": true,
     "cenaPronajem": 10
   }
 }
